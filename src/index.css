@@ -2,6 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+
+.register-link {
+  margin-top: 10px;
+  font-size: 14px;
+  text-align: center;
+  color: #333;
+}
+
+.register-link a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+  color: #0056b3;
+}
+
 .signup-background {
   position: relative;
   min-height: 100vh;

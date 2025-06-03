@@ -33,7 +33,7 @@ function Signup() {
 
             <div>or</div>
 
-            <h6 className='text-xs'>Already have an account? <Link to="/login">Login</Link></h6>
+            <h6 className='text-xs'>Already have an account? <Link to="/">Login</Link></h6>
           </div>
         </div>
       </form>
