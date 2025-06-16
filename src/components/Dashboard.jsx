@@ -13,7 +13,7 @@ export default function Dashboard() {
 
     useEffect(() => {
         // Fetch product data from the server
-        axios.get('http://localhost:7000/products')
+        axios.get('https://petcare-api-1.onrender.com/products')
             .then(response => {
                 setProducts(response.data);
             })
@@ -23,7 +23,7 @@ export default function Dashboard() {
     }, []);
 
     const addToCart = (product, index) => {
-        axios.post('http://localhost:7000/cart', product)
+        axios.post('https://petcare-api-1.onrender.com/cart', product)
             .then(result => {
                 console.log(result);
                 setClickedButton(index);

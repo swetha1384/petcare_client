@@ -13,7 +13,7 @@ function Signup() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(e);
-    axios.post('http://localhost:7000/register', { email, password })
+    axios.post('https://petcare-api-1.onrender.com/register', { email, password })
       .then(result => {
         console.log(result);
         navigate('/login');

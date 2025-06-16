@@ -20,7 +20,7 @@ export default function Addtask() {
 
     const userEmail = localStorage.getItem('userEmail'); // Retrieve the user's email from localStorage
 
-    axios.post('http://localhost:7000/addtask', { variety, task, date, userEmail }) // Include the user's email in the request
+    axios.post('https://petcare-api-1.onrender.com/addtask', { variety, task, date, userEmail }) // Include the user's email in the request
       .then(result => {
         setMessage("Task added successfully!");
         setError(null);

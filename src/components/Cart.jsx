@@ -7,7 +7,7 @@ const Cart = () => {
 
   useEffect(() => {
     // Fetch product data from the server
-    axios.get('http://localhost:7000/getcart')
+    axios.get('https://petcare-api-1.onrender.com/getcart')
       .then(response => {
         setCarts(response.data);
       })
@@ -18,7 +18,7 @@ const Cart = () => {
 
   // Function to handle item removal
   const handleRemove = (id) => {
-    axios.delete(`http://localhost:7000/deletecart/${id}`)
+    axios.delete(`https://petcare-api-1.onrender.com/deletecart/${id}`)
       .then(response => {
         // Remove the item from the state
         setCarts(carts.filter(cart => cart._id !== id));

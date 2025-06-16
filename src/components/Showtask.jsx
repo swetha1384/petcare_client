@@ -7,7 +7,7 @@ export default function Showtask() {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:7000/showtask')
+        axios.get('https://petcare-api-1.onrender.com/showtask')
             .then(response => {
                 setProducts(response.data);
             })
@@ -18,7 +18,7 @@ export default function Showtask() {
 
     const deleteTask = async (taskId) => {
         try {
-          await axios.delete(`http://localhost:7000/deleteTask/${taskId}`);
+          await axios.delete(`https://petcare-api-1.onrender.com/deleteTask/${taskId}`);
           setProducts(prevProducts => prevProducts.filter(product => product._id !== taskId));
         } catch (error) {
           console.error('Error deleting task:', error);

@@ -11,7 +11,7 @@ function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post('http://localhost:7000/', { email, password })
+    axios.post('https://petcare-api-1.onrender.com/', { email, password })
       .then(result => {
         if (result.data.status === 'success') {
           localStorage.setItem('userEmail', result.data.email); // Store the user's email in localStorage

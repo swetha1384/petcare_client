@@ -11,7 +11,7 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post('http://localhost:7000/contact', { name, email, review })
+    axios.post('https://petcare-api-1.onrender.com/contact', { name, email, review })
       .then(result => {
         setMessage("Review sent successfully!");
         setError(null);
